@@ -1,0 +1,152 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "AssignmentStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "AssignmentStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "AssignmentStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AssignmentStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "notificationArns": [],
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/126dd625f41ae78c4ee6e0f642968fde116dce4e535a3eabdacae81b58e4c0b0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "AssignmentStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "AssignmentStack.assets"
+      ],
+      "metadata": {
+        "/AssignmentStack/TasksTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "TasksTable88911DC5"
+            }
+          }
+        ],
+        "/AssignmentStack/TasksTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksTable88911DC5"
+          }
+        ],
+        "/AssignmentStack/GetAllItemsFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAllItemsFunctionServiceRole67015B7B"
+          }
+        ],
+        "/AssignmentStack/GetAllItemsFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAllItemsFunctionServiceRoleDefaultPolicy839A77E7"
+          }
+        ],
+        "/AssignmentStack/GetAllItemsFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAllItemsFunctionFF045CBD"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApi2C54C787"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApiDeploymentE29B782Ac999ffa475b6f6a6db28db4b3553f37c"
+          }
+        ],
+        "/AssignmentStack/TasksApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApiDeploymentStageprod14B6EF0B"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApiEndpointD54269F3"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Default/task/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApitask47A03C55"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Default/task/GET/ApiPermission.AssignmentStackTasksApi703DF127.GET..task": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApitaskGETApiPermissionAssignmentStackTasksApi703DF127GETtaskB80FD11B"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Default/task/GET/ApiPermission.Test.AssignmentStackTasksApi703DF127.GET..task": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApitaskGETApiPermissionTestAssignmentStackTasksApi703DF127GETtask076BF144"
+          }
+        ],
+        "/AssignmentStack/TasksApi/Default/task/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TasksApitaskGET924DE3E3"
+          }
+        ],
+        "/AssignmentStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/AssignmentStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/AssignmentStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/AssignmentStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "AssignmentStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
